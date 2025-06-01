@@ -1,0 +1,36 @@
+name: Check API Source Code
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          check-latest: true
+
+      - name: Enable Yarn
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Typescript Type Check
+        run: yarn build:check
+
+      - name: Build Production
+        if: contains(github.event.pull_request.labels.*.name, 'dependencies')
+        run: yarn build-prod
