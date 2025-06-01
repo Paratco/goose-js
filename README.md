@@ -154,4 +154,4 @@ better-sqlite3://./mydb.sqlite
 
 ## License
 
-ISC
+Licensed under [MIT License](./LICENSE)
