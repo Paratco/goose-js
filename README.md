@@ -1,4 +1,6 @@
-# goose-js
+> 🚧 **Work in Progress**
+>
+> goose-js is currently in development use it for production with your responsibility.
 
 A JavaScript implementation of the [goose](https://github.com/pressly/goose) database migration tool. Goose-js is
 designed to be compatible with goose, but using JavaScript migration files instead of Go.
