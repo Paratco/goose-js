@@ -564,6 +564,46 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@paratco/goose-js@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@paratco/goose-js@workspace:."
+  dependencies:
+    "@commander-js/extra-typings": "npm:^14.0.0"
+    "@paratco/eslint-config": "npm:^2.2.2"
+    "@rollup/plugin-terser": "npm:^0.4.4"
+    "@rollup/plugin-typescript": "npm:^12.1.2"
+    "@types/node": "npm:^22.15.29"
+    commander: "npm:^14.0.0"
+    eslint: "npm:^9.28.0"
+    knex: "npm:^3.1.0"
+    mysql2: "npm:^3.14.1"
+    pg: "npm:^8.16.0"
+    rollup: "npm:^4.41.1"
+    sqlite3: "npm:^5.1.7"
+    tslib: "npm:^2.8.1"
+    tsx: "npm:^4.19.4"
+    typescript: "npm:~5.8.3"
+    typescript-eslint: "npm:^8.33.0"
+  peerDependenciesMeta:
+    better-sqlite3:
+      optional: true
+    mysql:
+      optional: true
+    mysql2:
+      optional: true
+    pg:
+      optional: true
+    pg-native:
+      optional: true
+    sqlite3:
+      optional: true
+    tedious:
+      optional: true
+  bin:
+    goose-cli: dist/cli.js
+  languageName: unknown
+  linkType: soft
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -2839,46 +2879,6 @@ __metadata:
   checksum: 10c0/9d156f313af79d80b1566b93e19285f481c591ad6d0d319b4be5e03750d004dde40a39a0f26f7e635f9007a3600802f53ecd85a759b86f109e80a5f705e01846
   languageName: node
   linkType: hard
-
-"goose-js@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "goose-js@workspace:."
-  dependencies:
-    "@commander-js/extra-typings": "npm:^14.0.0"
-    "@paratco/eslint-config": "npm:^2.2.2"
-    "@rollup/plugin-terser": "npm:^0.4.4"
-    "@rollup/plugin-typescript": "npm:^12.1.2"
-    "@types/node": "npm:^22.15.29"
-    commander: "npm:^14.0.0"
-    eslint: "npm:^9.28.0"
-    knex: "npm:^3.1.0"
-    mysql2: "npm:^3.14.1"
-    pg: "npm:^8.16.0"
-    rollup: "npm:^4.41.1"
-    sqlite3: "npm:^5.1.7"
-    tslib: "npm:^2.8.1"
-    tsx: "npm:^4.19.4"
-    typescript: "npm:~5.8.3"
-    typescript-eslint: "npm:^8.33.0"
-  peerDependenciesMeta:
-    better-sqlite3:
-      optional: true
-    mysql:
-      optional: true
-    mysql2:
-      optional: true
-    pg:
-      optional: true
-    pg-native:
-      optional: true
-    sqlite3:
-      optional: true
-    tedious:
-      optional: true
-  bin:
-    goose-cli: dist/cli.js
-  languageName: unknown
-  linkType: soft
 
 "gopd@npm:^1.0.1, gopd@npm:^1.2.0":
   version: 1.2.0
