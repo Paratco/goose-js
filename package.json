@@ -1,5 +1,5 @@
 {
-  "name": "goose-js",
+  "name": "@paratco/goose-js",
   "version": "0.0.1",
   "description": "JavaScript implementation of goose database migration tool",
   "type": "module",
