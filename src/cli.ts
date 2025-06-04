@@ -127,20 +127,4 @@ program
     }
   });
 
-program
-  .command("status")
-  .description("Roll back to a specific version")
-  .action(async () => {
-    const opts = { ...program.opts(), driver: process.env.GOOSE_DRIVER, dbString: process.env.GOOSE_DBSTRING };
-
-    try {
-      await initializeDb(opts);
-      await statusMigration(opts);
-      process.exit(0);
-    } catch (error) {
-      console.error(`Error dumping status: ${(error as Error).message}`);
-      process.exit(1);
-    }
-  });
-
 program.parse();
