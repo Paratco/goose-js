@@ -33,4 +33,4 @@ jobs:
 
       - name: Build Production
         if: contains(github.event.pull_request.labels.*.name, 'dependencies')
-        run: yarn build-prod
+        run: yarn build
