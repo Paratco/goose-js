@@ -127,4 +127,20 @@ program
     }
   });
 
+program
+  .command("reset")
+  .description("Roll back all migrations")
+  .action(async () => {
+    const opts = { ...program.opts(), driver: process.env.GOOSE_DRIVER, dbString: process.env.GOOSE_DBSTRING };
+
+    try {
+      await initializeDb(opts);
+      await downToMigration(opts, "0");
+      process.exit(0);
+    } catch (error) {
+      console.error(`Error rolling back all migration : ${(error as Error).message}`);
+      process.exit(1);
+    }
+  });
+
 program.parse();
