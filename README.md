@@ -51,6 +51,9 @@ goose-cli down-to 20230101120000
 
 # Show migration status
 goose-cli status
+
+# roll back all migrations
+goose-cli reset
 ```
 
 ### Options
