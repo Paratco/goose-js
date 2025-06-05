@@ -30,7 +30,9 @@
     "build": "rollup -c --configPlugin typescript",
     "build:check": "tsc --noEmit",
     "dev": "tsx --env-file=.env src/index.ts",
-    "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0"
+    "lint": "eslint . --report-unused-disable-directives-severity error --max-warnings 0",
+    "release": "semantic-release",
+    "release-dry-debug": "semantic-release --no-ci -d --debug"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^14.0.0",
@@ -100,7 +102,12 @@
           ]
         }
       ],
-      "@semantic-release/github"
+      [
+        "@semantic-release/github",
+        {
+          "releaseNameTemplate": "Release <%= nextverison.name %>"
+        }
+      ]
     ]
   }
 }
