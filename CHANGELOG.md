@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/Paratco/goose-js/compare/0.2.0...0.2.1) (2025-06-07)
+
+
+### Bug Fixes
+
+* update linter package ([2403ef7](https://github.com/Paratco/goose-js/commit/2403ef77d87b2e152d924e254cce8d36252dffe0))
+
 # [0.2.0](https://github.com/Paratco/goose-js/compare/0.1.0...0.2.0) (2025-06-07)
 
 
