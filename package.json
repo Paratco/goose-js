@@ -1,6 +1,6 @@
 {
   "name": "@paratco/goose-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript implementation of goose database migration tool",
   "type": "module",
   "author": "Paratco",
@@ -94,7 +94,7 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
-        [
+      [
         "@semantic-release/git",
         {
           "assets": [

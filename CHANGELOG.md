@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/Paratco/goose-js/compare/0.1.0...0.2.0) (2025-06-07)
+
+
+### Features
+
+* add docker build ([f471a74](https://github.com/Paratco/goose-js/commit/f471a7405ddfc7c12250cb56b64095c07f6cf3f9))
+
 # [0.1.0](https://github.com/Paratco/goose-js/compare/0.0.1...0.1.0) (2025-06-05)
 
 
