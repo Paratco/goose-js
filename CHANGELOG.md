@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/Paratco/goose-js/compare/0.2.1...0.3.0) (2025-06-10)
+
+
+### Features
+
+* add irreversible flag in migrations ([bb12eb7](https://github.com/Paratco/goose-js/commit/bb12eb7f5cc4743e937192ca7fd31a121a6909ff))
+
 ## [0.2.1](https://github.com/Paratco/goose-js/compare/0.2.0...0.2.1) (2025-06-07)
 
 

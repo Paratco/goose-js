@@ -1,6 +1,6 @@
 {
   "name": "@paratco/goose-js",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "JavaScript implementation of goose database migration tool",
   "type": "module",
   "author": "Paratco",
