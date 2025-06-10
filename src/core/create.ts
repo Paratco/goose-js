@@ -53,8 +53,11 @@ export async function down(db) {
   // await db.schema.dropTable('users');
 }
 
-// optionally export a flag to indicate that this migration does not require a transaction
-//export noTransaction = true;
+// optionally export a flag to indicate that this migration does not require a transaction (default is false)
+//export const noTransaction = true;
+
+// optionally export a flag to indicate that this migration is irreversible (default is false)
+//export const irreversible = true;
 `;
 
   const templateSql = `-- +goose Up

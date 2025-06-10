@@ -93,7 +93,7 @@ better-sqlite3
 
 ### Migration Files
 
-Migration files are JavaScript files with `up` and `down` functions that are exported:
+Migration files are JavaScript files with `up` and `down` (optional) functions that are exported:
 
 ```javascript
 /**
@@ -111,12 +111,27 @@ export async function up(db) {
 
 /**
  * Down migration
+ * optional
  * @param {import('knex').Knex} db - The database connection
  */
 export async function down(db) {
     await db.schema.dropTable('users');
 }
+
+// optionally export a flag to indicate that this migration does not require a transaction (default is false)
+//export const noTransaction = true;
+
+// optionally export a flag to indicate that this migration is irreversible (default is false)
+//export const irreversible = true;
 ```
+also with noTransaction and irreversible flags you can control the behavior of the migration:
+- `noTransaction`: If exported as `true`, the migrator Runs the entire up (or down) outside of an enclosing transaction. Useful for DDL that MySQL won’t allow in a TXN or to avoid long-running locks
+- `irreversible`: If exported as `true`, the migrator refuses to rollback (and halts further “down” migrations when stepping back), even if you’ve implemented a down() function. Acts like a hard save-point.
+
+difference of irreversible and not exporting `down` is that: 
+`irreversible migration will not be rolled back and stops below migrations too (act like save point in reset and down-to 0 commands), while not exporting down will just skip the rollback step.`
+
+irreversible is a custom flag and not part of goose, you can use it in sql migrations too, just use `-- +goose IRREVERSIBLE` in top of file.
 
 ## Programmatic Usage
 

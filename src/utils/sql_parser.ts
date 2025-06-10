@@ -86,6 +86,7 @@ export function parseSqlMigration(sql: string): MigrationModule {
         }
       }
       : undefined,
-    noTransaction: sql.includes("-- +goose NO TRANSACTION")
+    noTransaction: sql.includes("-- +goose NO TRANSACTION"),
+    irreversible: sql.includes("-- +goose IRREVERSIBLE")
   };
 }

@@ -3,7 +3,7 @@ import path from "node:path";
 import type { Knex } from "knex";
 import { getDb } from "@/db/init";
 import { formatDate, getVersionFromFilename } from "@/utils/common";
-import { parseSqlMigration } from "@/utils/sql-parser";
+import { parseSqlMigration } from "@/utils/sql_parser";
 
 export interface MigrationOptions {
   driver: string | undefined;
@@ -24,6 +24,7 @@ export interface MigrationModule {
   up: (db: Knex) => Promise<void>;
   down?: (db: Knex) => Promise<void>;
   noTransaction: boolean;
+  irreversible: boolean;
 }
 
 interface MigrationFile {
@@ -82,10 +83,15 @@ async function getMigrationFiles(migrationsDir: string): Promise<MigrationFile[]
           throw new TypeError(`Migration ${filename} noTransaction export must be a boolean`);
         }
 
+        if (importedModule.irreversible !== undefined && typeof importedModule.irreversible !== "boolean") {
+          throw new TypeError(`Migration ${filename} irreversible export must be a boolean`);
+        }
+
         module = {
           up: importedModule.up as MigrationModule["up"],
           down: importedModule.down as MigrationModule["down"],
-          noTransaction: Boolean(importedModule.noTransaction)
+          noTransaction: Boolean(importedModule.noTransaction),
+          irreversible: Boolean(importedModule.irreversible)
         };
       }
 
@@ -275,6 +281,11 @@ export async function downToMigration(options: MigrationOptions, version?: strin
     }
 
     try {
+      if (migration.module.irreversible) {
+        console.log(`irreversible migration: ${migration.filename} (finishing rollback)`);
+        break;
+      }
+
       if (migration.module.noTransaction) {
         // Run without transaction
         if (options.verbose) {
