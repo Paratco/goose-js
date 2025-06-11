@@ -57,7 +57,7 @@ async function getMigrationFiles(migrationsDir: string): Promise<MigrationFile[]
 
   for (const filename of migrationFiles) {
     const version = getVersionFromFilename(filename);
-    const filepath = path.join(process.cwd(), migrationsDir, filename);
+    const filepath = path.join(migrationsDir, filename);
     const isSqlFile = filename.endsWith(".sql");
 
     try {
