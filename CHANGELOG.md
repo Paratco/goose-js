@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/Paratco/goose-js/compare/0.3.0...0.3.1) (2025-06-11)
+
+
+### Bug Fixes
+
+* wrong usage of process.cwd as working directory ([8c84765](https://github.com/Paratco/goose-js/commit/8c8476518514774fd2d438868a5c2bf6e1d602c6))
+
 # [0.3.0](https://github.com/Paratco/goose-js/compare/0.2.1...0.3.0) (2025-06-10)
 
 
