@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/Paratco/goose-js/compare/0.3.1...0.3.2) (2025-06-15)
+
+
+### Bug Fixes
+
+* resolving file urls for js migrations ([74932b4](https://github.com/Paratco/goose-js/commit/74932b4c42aa7169364e1a8e2e063c7e5db6aa7a))
+
 ## [0.3.1](https://github.com/Paratco/goose-js/compare/0.3.0...0.3.1) (2025-06-11)
 
 
