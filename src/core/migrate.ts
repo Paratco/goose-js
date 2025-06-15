@@ -69,7 +69,7 @@ async function getMigrationFiles(migrationsDir: string): Promise<MigrationFile[]
         module = parseSqlMigration(sqlContent);
       } else {
         // For JS files, import the module
-        const importedModule = (await import(`file:${filepath}`)) as Record<string, unknown>;
+        const importedModule = (await import(`file:${path.resolve(filepath)}`)) as Record<string, unknown>;
 
         if (typeof importedModule.up !== "function") {
           throw new TypeError(`Migration ${filename} must export up function`);
