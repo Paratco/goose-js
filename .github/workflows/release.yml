@@ -21,7 +21,7 @@ jobs:
       - uses: actions/create-github-app-token@v2
         id: app-token
         with:
-          app-id: ${{ secrets.PARATCO_BOT_ID }}
+          app-id: ${{ vars.PARATCO_BOT_ID }}
           private-key: ${{ secrets.PARATCO_BOT_KEY }}
 
       - name: Get GitHub App User ID
