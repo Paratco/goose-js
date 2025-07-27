@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2024",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "outDir": "dist",
     "baseUrl": "./",
     "rootDir": "./",
@@ -23,6 +23,6 @@
     "sourceMap": false
   },
   "include": [
-    "src", "rollup.config.ts"
+    "src", "tsdown.config.ts"
   ]
 }
