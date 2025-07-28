@@ -1,3 +1,9 @@
+## [0.3.3](https://github.com/Paratco/goose-js/compare/0.3.2...0.3.3) (2025-07-28)
+
+### ⬆️ Dependency Updates
+
+* **deps:** update packages and change release ([ec99f80](https://github.com/Paratco/goose-js/commit/ec99f807c33a0d308204b642eee20d88f919d726))
+
 ## [0.3.2](https://github.com/Paratco/goose-js/compare/0.3.1...0.3.2) (2025-06-15)
 
 
