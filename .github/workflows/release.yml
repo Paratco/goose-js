@@ -105,6 +105,8 @@ jobs:
         with:
           file: .docker/Dockerfile
           push: true
+          sbom: true
+          provenance: mode=max
           tags: |
             paratco/goose-js:${{steps.version.outputs.VERSION}}
             paratco/goose-js:latest
