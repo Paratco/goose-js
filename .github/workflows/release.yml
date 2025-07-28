@@ -99,7 +99,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push api
+      - name: Set up Docker Buildx
+        if: ${{ github.event.inputs.debug != 'true' }}
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+          name: goosejs-builder
+
+      - name: Build and push
         if: ${{ github.event.inputs.debug != 'true' }}
         uses: docker/build-push-action@v6
         with:
@@ -114,7 +121,7 @@ jobs:
       - name: Generate .dockerbuild
         if: ${{ github.event.inputs.debug != 'true' }}
         run: |
-          docker buildx history export --builder default --output builds.dockerbuild
+          docker buildx history export --builder goosejs-builder --output builds.dockerbuild
 
       - name: Semantic Release
         if: ${{ github.event.inputs.debug != 'true' }}
