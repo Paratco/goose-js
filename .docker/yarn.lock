@@ -1477,6 +1477,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"iconv-lite@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "iconv-lite@npm:0.7.0"
+  dependencies:
+    safer-buffer: "npm:>= 2.1.2 < 3.0.0"
+  checksum: 10c0/2382400469071c55b6746c531eed5fa4d033e5db6690b7331fb2a5f59a30d7a9782932e92253db26df33c1cf46fa200a3fbe524a2a7c62037c762283f188ec2f
+  languageName: node
+  linkType: hard
+
 "ieee754@npm:^1.1.13, ieee754@npm:^1.2.1":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
@@ -2067,19 +2076,19 @@ __metadata:
   linkType: hard
 
 "mysql2@npm:^3.14.2":
-  version: 3.14.2
-  resolution: "mysql2@npm:3.14.2"
+  version: 3.15.1
+  resolution: "mysql2@npm:3.15.1"
   dependencies:
     aws-ssl-profiles: "npm:^1.1.1"
     denque: "npm:^2.1.0"
     generate-function: "npm:^2.3.1"
-    iconv-lite: "npm:^0.6.3"
+    iconv-lite: "npm:^0.7.0"
     long: "npm:^5.2.1"
     lru.min: "npm:^1.0.0"
     named-placeholders: "npm:^1.1.3"
     seq-queue: "npm:^0.0.5"
     sqlstring: "npm:^2.3.2"
-  checksum: 10c0/72c243f9cd4ccc64caaaa815392b31ec4119d4eeefe77953f5c3bdab483e4dd326bca04afb2513ae7b60997362cbde0f70a9eea9122c20122391387145287bd1
+  checksum: 10c0/b40a90fda387a818f36e7fe486b41bfefafc7ee2925c53da761a8e3237fd63ddf72f8c64f8ff4a13abd593e8f72add852d405b5b011fe8b0763f428a2281f3ad
   languageName: node
   linkType: hard
 
