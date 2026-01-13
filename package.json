@@ -49,7 +49,7 @@
     "@semantic-release/github": "^11.0.3",
     "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^14.0.3",
-    "@types/node": "^24.1.0",
+    "@types/node": "^25.0.7",
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint": "^9.32.0",
     "mysql2": "^3.14.2",
